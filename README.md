@@ -2,6 +2,85 @@
 
 A hands-on learning lab for Azure logging with Node.js, App Service, and Application Insights.
 
+---
+
+## What is Azure App Service?
+
+**Azure App Service** is a fully managed platform-as-a-service (PaaS) for hosting web applications, APIs, and mobile backends. You deploy your code and Azure handles the infrastructure.
+
+### Why Use App Service?
+
+| Benefit | Description |
+|---------|-------------|
+| **No server management** | Azure manages VMs, OS patches, load balancing |
+| **Auto-scaling** | Scale up/down or scale out automatically |
+| **Built-in CI/CD** | Deploy from GitHub, Azure DevOps, or local git |
+| **Multiple languages** | Node.js, .NET, Java, Python, PHP, Ruby |
+| **Security** | SSL/TLS, authentication, managed identities |
+| **Monitoring** | Built-in Application Insights integration |
+| **Cost effective** | Free tier for learning, paid tiers for production |
+
+### App Service vs Other Options
+
+| Option | Best For | Management Level |
+|--------|----------|------------------|
+| **App Service** | Web apps, APIs | Fully managed (PaaS) |
+| **Azure Container Apps** | Containerized apps | Managed containers |
+| **Azure Kubernetes Service** | Complex microservices | You manage K8s |
+| **Virtual Machines** | Full control needed | You manage everything |
+| **Azure Functions** | Event-driven, serverless | Fully serverless |
+
+### How App Service Works
+
+```
+Your Code → Deploy → App Service Plan → Web App → Public URL
+                           ↓
+                    Application Insights (monitoring)
+```
+
+**Key Concepts:**
+
+1. **App Service Plan** - Defines compute resources (CPU, memory, region)
+2. **Web App** - The actual application container
+3. **Deployment** - How code gets to the app (zip, git, container)
+4. **App Settings** - Environment variables (config, secrets)
+
+### Pricing Tiers
+
+| Tier | Use Case | Cost |
+|------|----------|------|
+| **Free (F1)** | Learning, development | Free |
+| **Basic (B1)** | Small production apps | ~$13/month |
+| **Standard (S1)** | Production workloads | ~$73/month |
+| **Premium (P1)** | High performance | ~$146/month |
+
+---
+
+## What is Application Insights?
+
+**Application Insights** is an Application Performance Management (APM) service. It monitors your live applications and helps you diagnose issues and understand usage.
+
+### What It Tracks
+
+| Telemetry Type | Description | Table Name |
+|----------------|-------------|------------|
+| **Requests** | HTTP requests to your app | `requests` |
+| **Traces** | Application logs (console.log) | `traces` |
+| **Exceptions** | Errors and exceptions | `exceptions` |
+| **Dependencies** | DB calls, HTTP calls | `dependencies` |
+| **Metrics** | Custom measurements | `customMetrics` |
+| **Performance Counters** | CPU, memory, etc. | `performanceCounters` |
+
+### Why Use Application Insights?
+
+- **Find bugs fast** - See exceptions with stack traces
+- **Understand performance** - Identify slow requests
+- **Track usage** - See what users do in your app
+- **Set alerts** - Get notified when things break
+- **Live Metrics** - See real-time data as requests come in
+
+---
+
 ## What You'll Learn
 
 | Topic | Endpoint | Portal Location |
